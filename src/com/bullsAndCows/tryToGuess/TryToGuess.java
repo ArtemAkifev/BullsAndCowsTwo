@@ -77,8 +77,11 @@ public class TryToGuess  {
         while (true) {
             try {
                 String numSt = scanner.nextLine();
+                char first = numSt.charAt(0);
                 if(numSt.equalsIgnoreCase("сдаюсь")){
                     break;
+                } else if (first == '-'){
+                    numSt = numSt + "xxxx";
                 }
 
                 String numArrayComp = "";
